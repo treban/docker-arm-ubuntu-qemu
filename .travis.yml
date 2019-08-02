@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+- docker
+
+install:
+  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
+  - docker build -t docker-qemu .
+
+#script:
+#  - docker run --rm docker-qemu #
+#after_success:
