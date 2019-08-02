@@ -4,7 +4,8 @@ services:
 - docker
 
 install:
-  - docker run --rm --privileged multiarch/qemu-user-static -p yes
+  - apt-get install qemu binfmt-support qemu-user-static
+  - docker run --rm --privileged multiarch/qemu-user-static:register
   - docker build -t docker-qemu .
 
 #script:
