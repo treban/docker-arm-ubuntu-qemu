@@ -1,4 +1,4 @@
-FROM arm32v7/ubuntu:16.04
+FROM arm32v7/ubuntu
 
 LABEL Description="arm ubuntu qemu image for builds" Maintainer="trebankosta@gmail.com" Version="0.1"
 
