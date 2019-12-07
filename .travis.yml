@@ -6,7 +6,7 @@ services:
 install:
   - docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
   - docker build -t docker-qemu .
+  - docker run -d --name docker-qemu docker-qemu
 
-#script:
-#  - docker run --rm docker-qemu #
-#after_success:
+script:
+  - docker ps -a
